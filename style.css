@@ -14,3 +14,49 @@ ul{
     --cinza-branco: rgb(170, 170, 170);
     --branco: rgb(255, 255, 255);
 }
+
+.referencias{
+    text-align: center;
+}
+
+/* NAVBAR */
+
+.navbar{
+    /* background-color: var(--cinza-branco); */
+    height: 100px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navbar_bars{
+    /* background-color: var(--branco); */
+    width: 2rem;
+    cursor: pointer;
+}
+
+.navbar_cart{
+    /* background-color: var(--branco); */
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.navbar_logo{
+    /* background-color: var(--branco); */
+    height: 100%;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* CAPA */
+
+.capa{
+    background-color: var(--cinza-preto);
+    height: calc(100vh - 100px);
+}
+
+
+
