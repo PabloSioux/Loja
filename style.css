@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+body.eclipse::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .8;
+    z-index: 1;    
+}
+
 ul{
     list-style: none;
 }
@@ -50,6 +68,77 @@ ul{
     cursor: pointer;
     height: 100%;
 }
+
+/* MENU */
+
+.menu{
+    display: block;
+    background-color: white;
+    width: 33.33%;
+    height: 100vh;
+    position: absolute;
+    overflow-x: visible;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 1s;
+}
+
+.menu--active{
+    transition: 1s;
+    transform: translateX(0);
+}
+
+.menu_cabecalho{
+    background-color: black;
+    color: white;
+    padding: 1rem .5rem;
+
+}
+
+.menu_close{
+    background-color: white;
+    cursor: pointer;
+    padding: .4rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 800px){
+    .menu{
+        width: 70%;
+    }
+}
+
+.menu_login{
+    /* background-color: green; */
+    cursor: pointer;
+}
+
+.menu_user{
+    /* background-color: blue; */
+    width: 1.5rem;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+.menu_lista{
+    /* background-color: blueviolet; */
+}
+
+.menu_item{
+    /* background-color: brown; */
+    padding: .5rem .5rem;
+    cursor: pointer;
+}
+.menu_item:hover{
+    background-color: var(--cinza-preto);
+    color: white;
+}
+
 
 /* CAPA */
 
