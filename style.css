@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+:root{
+    --preto: rgb(0, 0, 0);
+    --cinza-preto: rgb(85, 85, 85);
+    --cinza-branco: rgb(170, 170, 170);
+    --branco: rgb(255, 255, 255);
+}
