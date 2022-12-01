@@ -95,11 +95,10 @@ ul{
     top: 0;
     z-index: 2;
     transform: translateX(-100%);
-    transition: 1s;
+    transition: .5s;
 }
 
 .menu--active{
-    transition: 1s;
     transform: translateX(0);
 }
 
@@ -123,10 +122,6 @@ ul{
 @media screen and (max-width: 800px){
     .menu{
         width: 70%;
-    }
-    .menu_login{
-      font-size: .75rem;
-      
     }
 }
 
