@@ -1,12 +1,15 @@
 var menu = document.querySelector('.menu');
-var bars = document.querySelector('.navbar_bars');
-
-
-
 var body = document.querySelector('body');
+var html = document.querySelector('html');
+var eclipse = document.querySelector('.eclipse');
 
-bars.onclick = () => {
-    menu.classList.add('menu--active');
-    // docu.style.display = 'block';
-    body.classList.add('eclipse');
+
+
+function menuAlterar(){
+  menu.classList.toggle('menu--active');
+    
+  eclipse.classList.toggle('eclipse--active');
+  html.classList.toggle('menu-active');
+  
 }
+

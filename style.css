@@ -9,23 +9,30 @@ html, body {
   overflow-x: hidden;
 }
 
-body{
-  
-    font-family: Arial, sans-serif;
-    
+html.menu-active{
+  overflow-y: hidden;
 }
 
-body.eclipse::after{
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    opacity: .8;
-    z-index: 1;    
+body{
+    font-family: Arial, sans-serif;
+}
+
+
+
+.eclipse{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .8;
+  z-index: 1;    
+}
+
+.eclipse.eclipse--active{
+  display: block;
 }
 
 ul{
@@ -116,6 +123,10 @@ ul{
 @media screen and (max-width: 800px){
     .menu{
         width: 70%;
+    }
+    .menu_login{
+      font-size: .75rem;
+      
     }
 }
 
