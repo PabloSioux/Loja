@@ -8,11 +8,13 @@ ul {
   list-style: none;
 }
 
-html,
-body {
-  width: 100%;
+
+html, body{
+  overflow-x: hidden;
+  width: 100vw;
   overflow-x: hidden;
 }
+
 
 html.menu-active {
   overflow-y: hidden;
@@ -49,10 +51,9 @@ html.menu-active .eclipse {
   display: block;
 }
 
-html.carrinho-active .eclipse {
+html.carrinho-active  .eclipse {
   display: block;
 }
-
 .referencias {
   text-align: center;
 }
@@ -98,15 +99,14 @@ html.carrinho-active .eclipse {
   height: 100vh;
   position: absolute;
   overflow-x: visible;
-  left: 0;
+  right: 100%;
   top: 0;
   z-index: 2;
-  transform: translateX(-100%);
   transition: .5s;
 }
 
 html.menu-active .menu {
-  transform: translateX(0);
+  transform: translateX(100%);
 }
 
 .menu_cabecalho {
@@ -175,16 +175,15 @@ html.menu-active .menu {
   width: 33.33%;
   height: 100vh;
   position: absolute;
-  right: 0;
+  left: 100%;
   top: 0;
   z-index: 2;
-  transform: translateX(100%);
   transition: .5s;
   padding: 1rem;
 }
 
 html.carrinho-active .carrinho {
-  transform: translateX(0);
+  transform: translateX(-100%);
 }
 
 @media screen and (max-width: 800px) {
