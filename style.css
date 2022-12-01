@@ -15,21 +15,10 @@ html, body{
 }
 
 
-html.menu-active html, body {
+html.carrinho-active, html.menu-active html, body {
   overflow-y: hidden;
 }
 
-/* html.menu-active body{
-  overflow-y: hidden;
-} */
-
-html.carrinho-active html, body{
-  overflow-y: hidden;
-}
-
-/* html.carrinho-active body {
-  overflow-y: hidden;
-} */
 
 body {
   font-family: Arial, sans-serif;
@@ -48,7 +37,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 130vh;
+  height: 110vh;
   background-color: black;
   opacity: .8;
   z-index: 1;
@@ -78,6 +67,12 @@ html.carrinho-active  .eclipse {
   padding: 1rem;
 }
 
+@media screen and (min-width: 600px){
+  .navbar {
+    padding-right: 1.5rem;
+  }
+}
+
 .navbar_bars {
   /* background-color: var(--branco); */
   width: 2rem;
@@ -103,9 +98,9 @@ html.carrinho-active  .eclipse {
   /* display: none; */
   display: block;
   background-color: white;
-  width: 33.33%;
-  height: 100vh;
-  position: absolute;
+  width: 70%;
+  height: 110vh;
+  position: fixed;
   overflow-x: visible;
   right: 100%;
   top: 0;
@@ -136,9 +131,12 @@ html.menu-active .menu {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 700px) {
   .menu {
-    width: 70%;
+    width: 33.33%;
+  }
+  html.menu-active .menu {
+    right: calc(100% - 33.33%);
   }
 }
 
@@ -182,23 +180,26 @@ html.menu-active .menu {
 .carrinho {
   display: block;
   background-color: white;
-  height: 100vh;
+  height: 110vh;
   width: 70%;
-  position: absolute;
+  position: fixed;
   left: 100%;
   top: 0;
   z-index: 2;
   padding: 1rem;
-  transition: left 1s;
+  transition: left .5s;
 }
 
 html.carrinho-active .carrinho {
   left: calc(100% - 70%);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .carrinho {
     width: 33.33%;
+  }
+  html.carrinho-active .carrinho {
+    left: calc(100% - 33%);
   }
 }
 
