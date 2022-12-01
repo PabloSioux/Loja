@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <img
-          class="navbar_bars"
-          src="img/bars.svg"
-          onclick="menuAlterar()"
-        >
-        <img class="navbar_logo" src="img/venus.png">
-        <img class="navbar_cart" src="img/cart.svg">
-    </nav>
-    <aside class="menu">
-        <div class="menu_cabecalho">
-            <img
-              class="menu_close"
-              src="img/close.svg"
-              onclick="menuAlterar()"
-            >
-            <div class="menu_login">
-                <img class="menu_user" src="img/user.svg">
-                <u>Faça Login</u> ou <u>Cadastre-se</u>
-            </div>
-        </div>
-        <ul class="menu_lista">
-            <li class="menu_item">Camisa</li>
-            <li class="menu_item">Blusa</li>
-            <li class="menu_item">Bermuda</li>
-            <li class="menu_item">Calça</li>
-            <li class="menu_item">Boné</li>
-            <li class="menu_item">Acessório</li>
-            <li class="menu_item">Infantil</li>
-        </ul>
-    </aside>
-
-    <div class="capa">
+  <nav class="navbar">
+    <img class="navbar_bars" src="img/bars.svg" onclick="menuAlterar()">
+    <img class="navbar_logo" src="img/venus.png">
+    <img class="navbar_cart" src="img/cart.svg" onclick="carrinhoAlterar()">
+  </nav>
+  <aside class="menu">
+    <div class="menu_cabecalho">
+      <img class="menu_close" src="img/close.svg" onclick="menuAlterar()">
+      <div class="menu_login">
+        <img class="menu_user" src="img/user.svg">
+        <u>Faça Login</u> ou <u>Cadastre-se</u>
+      </div>
     </div>
+    <ul class="menu_lista">
+      <li class="menu_item">Camisa</li>
+      <li class="menu_item">Blusa</li>
+      <li class="menu_item">Bermuda</li>
+      <li class="menu_item">Calça</li>
+      <li class="menu_item">Boné</li>
+      <li class="menu_item">Acessório</li>
+      <li class="menu_item">Infantil</li>
+    </ul>
+  </aside>
+
+  <aside class="carrinho">
+    <img
+      class="carrinho_close"
+      src="img/close.svg"
+      onclick="carrinhoAlterar()"
+    >
+  </aside>
+
+  <div class="capa">
+  </div>
 
 
 
 
-    <div class="eclipse" onclick="menuAlterar()"></div>
-    
-    <div class="referencias"> 
-        <a href="https://fontawesome.com/icons" title="icons">Icons Font Awesome</a>
-        <a href="https://www.flaticon.com/free-icons/planet" title="planet icons">Planet icons created by Freepik - Flaticon</a>
-    </div>
+  <div class="eclipse" onclick="fecharAside()"></div>
 
-    <script src="app.js"></script>
+  <div class="referencias">
+    <a href="https://fontawesome.com/icons" title="icons">Icons Font Awesome</a>
+    <a href="https://www.flaticon.com/free-icons/planet" title="planet icons">Planet icons created by Freepik - Flaticon</a>
+  </div>
+
+  <script src="app.js"></script>
 </body>
+
 </html>
