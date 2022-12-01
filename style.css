@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+ul{
+    list-style: none;
+}
+
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -17,7 +21,12 @@ body{
     font-family: Arial, sans-serif;
 }
 
-
+:root{
+    --preto: rgb(0, 0, 0);
+    --cinza-preto: rgb(85, 85, 85);
+    --cinza-branco: rgb(170, 170, 170);
+    --branco: rgb(255, 255, 255);
+}
 
 .eclipse{
   display: none;
@@ -31,19 +40,8 @@ body{
   z-index: 1;    
 }
 
-.eclipse.eclipse--active{
+html.menu-active .eclipse{
   display: block;
-}
-
-ul{
-    list-style: none;
-}
-
-:root{
-    --preto: rgb(0, 0, 0);
-    --cinza-preto: rgb(85, 85, 85);
-    --cinza-branco: rgb(170, 170, 170);
-    --branco: rgb(255, 255, 255);
 }
 
 .referencias{
@@ -98,7 +96,7 @@ ul{
     transition: .5s;
 }
 
-.menu--active{
+html.menu-active .menu{
     transform: translateX(0);
 }
 
