@@ -6,7 +6,7 @@ function menuAlterar(){
 
 function carrinhoAlterar(){
   html.classList.toggle('carrinho-active');
-  
+
 }
 
 function fecharAside() {
@@ -16,3 +16,4 @@ function fecharAside() {
     carrinhoAlterar();
   }
 }
+

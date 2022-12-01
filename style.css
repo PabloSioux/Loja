@@ -15,13 +15,21 @@ html, body{
 }
 
 
-html.menu-active {
+html.menu-active html, body {
   overflow-y: hidden;
 }
 
-html.carrinho-active {
+/* html.menu-active body{
+  overflow-y: hidden;
+} */
+
+html.carrinho-active html, body{
   overflow-y: hidden;
 }
+
+/* html.carrinho-active body {
+  overflow-y: hidden;
+} */
 
 body {
   font-family: Arial, sans-serif;
@@ -200,4 +208,13 @@ html.carrinho-active .carrinho {
   width: 30px;
   height: 30px;
   margin-bottom: 2rem;
+}
+
+
+html.menu-active {
+  overflow-y: hidden;
+}
+
+html.carrinho-active {
+  overflow-y: hidden;
 }
