@@ -62,4 +62,29 @@ body {
   text-align: center;
 }
 
+/* CAPA E BENEFICIO*/
+
+.capa{
+    height: calc(100vh - 200px);
+}
+
+.capa_imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+
+
+
+
+
+.beneficio{
+    background-color: rgb(170, 170, 170);
+    height: 100px;
+}
+
+
+
   

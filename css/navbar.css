@@ -143,14 +143,7 @@ html.carrinho-active, html.menu-active html, body {
     }
   }
   
-  
-  /* CAPA */
-  
-  .capa {
-    background-color: var(--cinza-preto);
-    height: calc(100vh - 100px);
-  }
-  
+
   /* CARRINHO */
   
   .carrinho {
