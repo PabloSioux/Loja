@@ -65,8 +65,8 @@ body {
 /* CAPA E BENEFICIO*/
 
 .capa{
-    height: calc(100vh - 200px);
-    overflow-y: hidden;
+    height: calc(100vh * 1 - 200px) !important;
+    overflow: hidden;
 }
 
 .capa_imagem{
