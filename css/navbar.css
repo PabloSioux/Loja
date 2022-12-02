@@ -1,0 +1,256 @@
+html.carrinho-active, html.menu-active html, body {
+    overflow-y: hidden;
+}
+
+.eclipse {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 110vh;
+    background-color: black;
+    opacity: .8;
+    z-index: 1;
+  }
+  
+  html.menu-active .eclipse {
+    display: block;
+  }
+  
+  html.carrinho-active  .eclipse {
+    display: block;
+  }
+
+
+/* NAVBAR */
+
+.navbar {
+    /* background-color: var(--cinza-branco); */
+    height: 100px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  @media screen and (min-width: 600px){
+    .navbar {
+      padding-right: 1.5rem;
+    }
+  }
+  
+  .navbar_bars {
+    /* background-color: var(--branco); */
+    width: 2rem;
+    cursor: pointer;
+  }
+  
+  .navbar_cart {
+    /* background-color: var(--branco); */
+    width: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .navbar_logo {
+    /* background-color: var(--branco); */
+    height: 100%;
+    cursor: pointer;
+    height: 100%;
+  }
+  
+  /* MENU */
+  
+  .menu {
+    /* display: none; */
+    display: block;
+    background-color: white;
+    width: 70%;
+    height: 110vh;
+    position: fixed;
+    overflow-x: visible;
+    right: 100%;
+    top: 0;
+    z-index: 2;
+    transition: right .5s;
+  }
+  
+  html.menu-active .menu {
+    /* display: block; */
+    right: calc(100% - 70%);
+    /* transform: translateX(100%); */
+  }
+  
+  .menu_cabecalho {
+    background-color: black;
+    color: white;
+    padding: 1rem .5rem;
+  
+  }
+  
+  .menu_close {
+    background-color: white;
+    cursor: pointer;
+    padding: .4rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 2rem;
+  }
+  
+  .menu_login {
+    /* background-color: green; */
+    cursor: pointer;
+  }
+  
+  .menu_user {
+    /* background-color: blue; */
+    width: 1.5rem;
+    vertical-align: middle;
+    margin-right: .5rem;
+  }
+  
+  .menu_lista {
+    /* background-color: blueviolet; */
+  }
+  
+  .menu_item {
+    /* background-color: brown; */
+    padding: .5rem .5rem;
+    cursor: pointer;
+  }
+  
+  .menu_item:hover {
+    background-color: var(--cinza-preto);
+    color: white;
+  }
+  
+  @media screen and (min-width: 700px) {
+    .menu {
+      width: 33.33%;
+    }
+    html.menu-active .menu {
+      right: calc(100% - 33.33%);
+    }
+    .menu_cabecalho {
+      padding: 1rem 2rem;
+    }
+    .menu_item {
+      font-size: 1.1rem;
+      padding: .75rem 2rem;
+    }
+  }
+  
+  
+  /* CAPA */
+  
+  .capa {
+    background-color: var(--cinza-preto);
+    height: calc(100vh - 100px);
+  }
+  
+  /* CARRINHO */
+  
+  .carrinho {
+    display: block;
+    background-color: white;
+    height: 110vh;
+    width: 70%;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    z-index: 2;
+    padding: 1rem;
+    transition: left .5s;
+  }
+  
+  html.carrinho-active .carrinho {
+    left: calc(100% - 70%);
+  }
+  
+  @media screen and (min-width: 700px) {
+    .carrinho {
+      width: 33.33%;
+    }
+    html.carrinho-active .carrinho {
+      left: calc(100% - 33%);
+    }
+  }
+  
+  .carrinho_close {
+    /**background-color: red;**/
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 1rem;
+  }
+  
+  
+  html.menu-active {
+    overflow-y: hidden;
+  }
+  
+  html.carrinho-active {
+    overflow-y: hidden;
+  }
+  
+  
+  .carrinho_titulo{
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+    font-size: 1.3rem;
+  }
+  
+  .carrinho_card{
+    /* background-color: aquamarine; */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .carrinho_imagem{
+    /* background-color: blueviolet; */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+  }
+  
+  .carrinho_frase{
+    /* background-color: brown; */
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .carrinho_texto{
+    /* background-color: cadetblue; */
+    font-size: .9rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: rgb(85, 85, 85);
+  }
+  
+  .carrinho_botao{
+    background-color: black;
+    padding: 1rem .5rem ;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    font-weight: 600;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 700px){
+    .carrinho_imagem{
+      width: 33%;
+    }
+    .carrinho {
+      padding: 1rem 3rem;
+    }
+  }
