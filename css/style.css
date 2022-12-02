@@ -66,24 +66,60 @@ body {
 
 .capa{
     height: calc(100vh - 200px);
+    overflow-y: hidden;
 }
 
 .capa_imagem{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
+    /* object-position: 50% 50%; */
 }
 
+/* VANTAGEM */
 
+.vantagem{
+    background-color: rgb(170, 170, 170);
+    height: 100vh;
+}
 
-
-
-
-.beneficio{
+/**
+.vantagem{
     background-color: rgb(170, 170, 170);
     height: 100px;
+    position: relative;
+    overflow-x: hidden;
 }
+
+.vantagem_item{
+    background-color: brown;
+    width: 100%;
+    height: 100%;
+}
+
+.vantagem_item:nth-child(1){
+    background-color: darkcyan;
+}
+
+.vantagem_seta-esquerda{
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+
+}
+
+.vantagem_seta-direita{
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+}
+
+**/
+
 
 
 

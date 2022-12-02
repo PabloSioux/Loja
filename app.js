@@ -1,5 +1,8 @@
 var html = document.querySelector('html');
 
+
+// NAVBAR
+
 function menuAlterar(){
   html.classList.toggle('menu-active');
 }
@@ -16,4 +19,5 @@ function fecharAside() {
     carrinhoAlterar();
   }
 }
+
 
