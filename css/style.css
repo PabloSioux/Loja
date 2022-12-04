@@ -89,22 +89,22 @@ body {
     height: 100vh;
 }
 
-
-
 /**VANTAGEM**/
+
 .slider{
-    background-color: skyblue;
-    height: 100px;
-    position: relative;
-    overflow-x: hidden;
-    width: 100vw;
+  /* background-color: skyblue; */
+  height: 100px;
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw;
 }
+
 
 .slides{
   position: absolute;
   width: 300vw;
   height: 100px;
-  background-color: darkred;
+  /* background-color: darkred; */
   top: 0;
   left: 0;
   display: flex;
@@ -112,19 +112,24 @@ body {
 }
 
 .slide{
-  
+  padding: 0 60px;
   height: 100px;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 60px;
 }
 .slide:nth-child(1){
-  background-color: darkgreen;
+  /* background-color: darkgreen; */
 }
 
 .slide:nth-child(2){
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
 }
 .slide:nth-child(3){
-  background-color: seagreen;
+  /* background-color: seagreen; */
 }
 
 .prev, .next{
@@ -139,4 +144,15 @@ body {
 }
 .next{
   right: 1rem;
+} 
+
+.icon{
+  /* background-color: brown; */
+  width: 50px;
+  
 }
+
+.texto{
+  /* background-color: blueviolet; */
+  max-width: 150px;
+} 
