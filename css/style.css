@@ -89,44 +89,54 @@ body {
     height: 100vh;
 }
 
-/**
-.vantagem{
-    background-color: rgb(170, 170, 170);
+
+
+/**VANTAGEM**/
+.slider{
+    background-color: skyblue;
     height: 100px;
     position: relative;
     overflow-x: hidden;
+    width: 100vw;
 }
 
-.vantagem_item{
-    background-color: brown;
-    width: 100%;
-    height: 100%;
+.slides{
+  position: absolute;
+  width: 300vw;
+  height: 100px;
+  background-color: darkred;
+  top: 0;
+  left: 0;
+  display: flex;
+  transition: all .5s ease-in-out;
 }
 
-.vantagem_item:nth-child(1){
-    background-color: darkcyan;
-}
-
-.vantagem_seta-esquerda{
-    background-color: blueviolet;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-
-}
-
-.vantagem_seta-direita{
-    background-color: blueviolet;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-}
-
-**/
-
-
-
-
+.slide{
   
+  height: 100px;
+  width: 100vw;
+}
+.slide:nth-child(1){
+  background-color: darkgreen;
+}
+
+.slide:nth-child(2){
+  background-color: greenyellow;
+}
+.slide:nth-child(3){
+  background-color: seagreen;
+}
+
+.prev, .next{
+  position: absolute;
+  width: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev{
+  left: 1rem;
+}
+.next{
+  right: 1rem;
+}

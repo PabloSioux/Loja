@@ -29,3 +29,35 @@ const documentHeight = () => {
  }
  window.addEventListener('resize', documentHeight);
  documentHeight();
+ 
+ 
+ 
+
+const allSlides = document.querySelectorAll('.slide');
+
+const slideWidth = allSlides[0].offsetWidth;
+
+const slides = document.getElementById('slides');
+
+
+
+const next = document.getElementById('next');
+
+const prev = document.getElementById('prev');
+
+next.addEventListener('click', () => {
+  switchSlide('next');
+});
+
+prev.addEventListener('click', () => {
+    switchSlide('prev');
+});
+
+function switchSlide(arg){
+  if(arg == 'next') {
+    slides.style.left = `${slides.offsetLeft - slideWidth}px`;
+  }
+  if(arg == 'prev') {
+    slides.style.left = `${slides.offsetLeft + slideWidth}px`;
+  }
+}
