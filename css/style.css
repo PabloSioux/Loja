@@ -89,7 +89,9 @@ body {
     height: 100vh;
 }
 
-/**VANTAGEM**/
+/**
+  SLIDE:
+**/
 
 .slider{
   /* background-color: skyblue; */
@@ -102,12 +104,14 @@ body {
 
 .slides{
   position: absolute;
-  width: 300vw;
+  width: 500vw;
   height: 100px;
   /* background-color: darkred; */
   top: 0;
-  left: 0;
+  left: -100vw;
   display: flex;
+}
+.slides.transition{
   transition: all .5s ease-in-out;
 }
 
