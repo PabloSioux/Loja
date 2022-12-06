@@ -160,3 +160,34 @@ body {
   /* background-color: blueviolet; */
   max-width: 150px;
 } 
+
+
+/**
+VITRINE
+**/
+
+.vitrine{
+  background-color: skyblue;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.vitrine_produto{
+  background-color: palevioletred;
+  width: calc(50% - .5rem);
+  
+}
+
+.vitrine_imagem{
+  
+}
+
+.vitrine_titulo{
+  
+}
+
+.vitrine_valor{
+  
+}
