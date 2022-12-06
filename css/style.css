@@ -177,17 +177,22 @@ VITRINE
 .vitrine_produto{
   background-color: palevioletred;
   width: calc(50% - .5rem);
+  text-align: center;
   
 }
 
 .vitrine_imagem{
-  
+  width: 100%;
+  margin-bottom: .5rem;
 }
 
 .vitrine_titulo{
+  font-size: .75rem;
+  margin-bottom: .25rem
   
 }
 
 .vitrine_valor{
-  
+  font-weight: 800;
+  font-size: 1rem;
 }
