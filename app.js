@@ -35,7 +35,9 @@ const documentHeight = () => {
 
 const allSlides = document.querySelectorAll('.slide');
 const slidesLength = allSlides.length;
+//O SLIDEWIDTH PERDE QUANDO REAJUSTAMOS O TAMANHO DA TELA, ENTÃO QUEBRA, POIS O SLIDE TENTA RECALCULAR UM TAMANHO ANTIGO
 const slideWidth = allSlides[0].offsetWidth;
+
 const slides = document.getElementById('slides');
 let index = 0;
 

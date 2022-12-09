@@ -38,7 +38,7 @@ html.carrinho-active, html.menu-active html, body {
   
   @media screen and (min-width: 600px){
     .navbar {
-      padding-right: 1.5rem;
+      width: 90%;
     }
   }
   

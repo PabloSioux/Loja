@@ -2,8 +2,11 @@
 VITRINE
 **/
 
+/* @media screen and (max-width: 300px){ */
 .vitrine{
-    /**background-color: skyblue;**/
+    /* background-color: skyblue; */
+    width: 100%;
+    margin: auto;
     padding: 1rem;
     padding-top: 3rem;
     display: flex;
@@ -39,3 +42,53 @@ VITRINE
     font-weight: 800;
     font-size: 1rem;
   }
+/* } */
+
+@media screen and (min-width: 700px){
+
+.vitrine{
+    max-width: 1200px;
+    width: 90%;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+
+
+    margin: auto;
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .vitrine_produto{
+    /**background-color: palevioletred;**/
+    width: calc(33.33% - 1rem);
+
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .vitrine_produto:last-child{
+    margin-bottom: 0;
+  }
+  
+  .vitrine_imagem{
+    width: 100%;
+    margin-bottom: .2rem;
+  }
+  
+  .vitrine_titulo{
+    /**background-color: blueviolet;**/
+    font-size: .75rem;
+    margin-bottom: .25rem;
+    min-height: 33px;
+  }
+  
+  .vitrine_valor{
+    font-weight: 800;
+    font-size: 1rem;
+  }
+
+}
+
