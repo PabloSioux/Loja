@@ -70,6 +70,9 @@ const lastSlide = allSlides[allSlides.length - 1];
 const cloneFirstSlide = firstSlide.cloneNode(true);
 const cloneLastSlide = lastSlide.cloneNode(true);
 
+cloneFirstSlide.classList.add('clone-first-slide');
+cloneLastSlide.classList.add('clone-last-slide');
+
 slides.appendChild(cloneFirstSlide);
 slides.insertBefore(cloneLastSlide, firstSlide);
 
