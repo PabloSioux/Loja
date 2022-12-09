@@ -84,6 +84,19 @@
     .slide{
       position: static;
       width: 33.33%;
+      position: relative;
+    }
+    
+    .slide:not(:nth-child(4)):after{
+      content: "";
+      width: 2px;
+      height: 3.5rem;
+      background-color: rgb(85, 85, 85);
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
     }
   
     .clone-first-slide{
