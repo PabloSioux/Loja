@@ -19,6 +19,8 @@
     top: 0;
     left: -100vw;
     display: flex;
+    cursor: pointer;
+    user-select: none;
   }
   .slides.transition{
     transition: all .5s ease-in-out;
@@ -49,6 +51,7 @@
     width: 30px;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
   }
   
   .prev{

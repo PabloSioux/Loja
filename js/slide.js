@@ -1,10 +1,21 @@
 
 //O SLIDEWIDTH PERDE QUANDO REAJUSTAMOS O TAMANHO DA TELA, ENTÃO QUEBRA, POIS O SLIDE TENTA RECALCULAR UM TAMANHO ANTIGO
 
+
+
 const slides = document.getElementById('slides');
-const allSlides = document.querySelectorAll('.slide');
+let allSlides = document.querySelectorAll('.slide');
 const slidesLength = allSlides.length;
-const slideWidth = allSlides[0].offsetWidth;
+let slideWidth = allSlides[0].offsetWidth;
+
+
+
+window.addEventListener('resize', () => {
+  slideWidth = allSlides[0].offsetWidth;
+  slides.style.left = `-${index * slideWidth}px`
+});
+
+
 
 let index = 0;
 let posX1;
