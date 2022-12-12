@@ -1,6 +1,6 @@
 const capa_slides = document.getElementById('capa_slides');
-const capa_allSlides = document.querySelectorAll('.capa_slide');
-const capa_slideWidth = capa_allSlides[0].offsetWidth;
+let capa_allSlides = document.querySelectorAll('.capa_slide');
+let capa_slideWidth = capa_allSlides[0].offsetWidth;
 const capa_slideLength = capa_allSlides.length;
 
 let capa_initialPosition;
@@ -9,6 +9,11 @@ let capa_index = 1;
 let capa_posX1; 
 let capa_posX2; 
 let capa_canISlide = true;
+
+window.addEventListener('resize', () => {
+    capa_slideWidth = capa_allSlides[0].offsetWidth;
+    capa_slides.style.left = `-${capa_index * capa_slideWidth}px`
+  });
 
 
 capa_slides.addEventListener('transitionend', capa_checkIndex);

@@ -8,15 +8,6 @@ let allSlides = document.querySelectorAll('.slide');
 const slidesLength = allSlides.length;
 let slideWidth = allSlides[0].offsetWidth;
 
-
-
-window.addEventListener('resize', () => {
-  slideWidth = allSlides[0].offsetWidth;
-  slides.style.left = `-${index * slideWidth}px`
-});
-
-
-
 let index = 0;
 let posX1;
 let posX2;
@@ -24,6 +15,11 @@ let initialPosition;
 let finalPosition;
 
 let canISlide = true;
+
+window.addEventListener('resize', () => {
+  slideWidth = allSlides[0].offsetWidth;
+  slides.style.left = `-${index * slideWidth}px`
+});
 
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
