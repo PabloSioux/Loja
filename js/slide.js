@@ -50,35 +50,24 @@ prev.addEventListener('click', () => switchSlide("prev"));
 
 slides.addEventListener('transitionend', checkIndex);
 
-slides.addEventListener('mousedown', dragStart);
 slides.addEventListener('touchstart', dragStart);
 slides.addEventListener('touchmove', dragMove);
 slides.addEventListener('touchend', dragEnd);
 
 function dragStart(e){
   if(canISlide){
-    e.preventDefault();
+    // e.preventDefault();
     initialPosition = slides.offsetLeft;
     
-    if (e.type == 'touchstart') {
-      posX1 = e.touches[0].clientX;
-    } else {
-      posX1 = e.clientX;
-    }
-    document.onmouseup = dragEnd;
-    document.onmousemove = dragMove;
+    posX1 = e.touches[0].clientX;
+
   }
 }
 
 function dragMove(e){
   if(canISlide){
-    if (e.type == 'touchmove') {
-      posX2 = posX1 - e.touches[0].clientX;
-      posX1 = e.touches[0].clientX;
-    } else {
-      posX2 = posX1 - e.clientX;
-      posX1 = e.clientX;
-    }
+    posX2 = posX1 - e.touches[0].clientX;
+    posX1 = e.touches[0].clientX;
     slides.style.left = `${slides.offsetLeft - posX2}px`;
   }
 }
@@ -101,8 +90,6 @@ function dragEnd(){
      } else {
        slides.style.left = `${initialPosition}px`;
      }
-     document.onmouseup = null;
-     document.onmousemove = null;
   }
 }
 
