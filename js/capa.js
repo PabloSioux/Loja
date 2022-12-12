@@ -23,35 +23,23 @@ capa_slides.appendChild(capa_cloneFirstSlide);
 capa_slides.insertBefore(capa_cloneLastSlide, capa_firstSlide)
 
 capa_slides.addEventListener('touchstart', capa_dragStart);
-capa_slides.addEventListener('mousedown', capa_dragStart);
 capa_slides.addEventListener('touchmove', capa_dragMove);
 capa_slides.addEventListener('touchend', capa_dragEnd);
 
 function capa_dragStart(e){
-    e.preventDefault();
+    // e.preventDefault();
     if(capa_canISlide){
         capa_initialPosition = capa_slides.offsetLeft;
-
-        if(e.type == 'touchstart'){
-            capa_posX1 = e.touches[0].clientX;
-        } else {
-            capa_posX1 = e.clientX;
-        }
-    
-        document.onmousemove = capa_dragMove;
-        document.onmouseup = capa_dragEnd;
+        capa_posX1 = e.touches[0].clientX;    
     }
 }
 
 function capa_dragMove(e){
     if (capa_canISlide) {
-        if(e.type == 'touchmove'){
-            capa_posX2 = capa_posX1 - e.touches[0].clientX;
-            capa_posX1 =  e.touches[0].clientX;
-        } else {
-            capa_posX2 = capa_posX1 - e.clientX;
-            capa_posX1 =  e.clientX;
-        }
+
+        capa_posX2 = capa_posX1 - e.touches[0].clientX;
+        capa_posX1 =  e.touches[0].clientX;
+
         capa_slides.style.left = `${
             capa_slides.offsetLeft - capa_posX2
         }px`;
@@ -71,8 +59,6 @@ function capa_dragEnd(e){
             capa_slides.style.left = capa_initialPosition + 'px';
         }
     
-        document.onmousemove = null;
-        document.onmouseup = null; 
     }
 
 }
