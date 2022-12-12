@@ -56,9 +56,9 @@ function capa_dragEnd(e){
     if (capa_canISlide) {
         capa_finalPosition = capa_slides.offsetLeft;
 
-        if(capa_finalPosition - capa_initialPosition < -100){
+        if(capa_finalPosition - capa_initialPosition < -50){
             capa_switchSlide('next', 'draging');
-        } else if(capa_finalPosition - capa_initialPosition > 100){
+        } else if(capa_finalPosition - capa_initialPosition > 50){
             capa_switchSlide('prev', 'draging');
         } else {
             capa_slides.style.left = capa_initialPosition + 'px';
