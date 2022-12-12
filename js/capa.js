@@ -152,3 +152,22 @@ function capa_dotMove(capa_n, capa_arg2){
     }
     
 }
+
+
+// CONCENTARDO O SCROLL DA PÁGINA
+capa_slides.addEventListener('touchstart', capa_scrollStart);
+capa_slides.addEventListener('touchmove', capa_scrollMove);
+
+let capa_posY1;
+let capa_posY2;
+
+function capa_scrollStart(e){
+    capa_posY1 = e.touches[0].clientY;
+}
+
+function capa_scrollMove(e){ 
+    capa_posY2 = capa_posY1 - e.touches[0].clientY;
+    capa_posY1 =  e.touches[0].clientY;
+    window.scrollBy(0, capa_posY2);
+
+}
