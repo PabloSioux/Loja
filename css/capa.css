@@ -1,13 +1,59 @@
 /* CAPA E BENEFICIO*/
 
-.capa{
-    height: calc(var(--doc-height) - 200px) !important;
+.capa_slider{
+    width: 100vw;
+    height:  calc(var(--doc-height) - 200px);
+    position: relative;
     overflow: hidden;
 }
 
-.capa_imagem{
+.capa_slides{
+    width: calc(100vw * 5);
+    height:  calc(var(--doc-height) - 200px);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    cursor: pointer;
+}
+
+.capa_transition{
+    transition: all .3s ease-in-out;
+}
+
+.capa_slide{
+    width: 100vw;
+    height:  calc(var(--doc-height) - 200px);
+}
+
+.capa_img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* object-position: 50% 50%; */
+}
+
+
+
+.capa_dot-container{
+    list-style-type: none;
+    position: absolute;
+    bottom: 1rem;
+    /* background-color: aqua; */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.capa_dot{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(170, 170, 170);
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 3px;
+}
+
+.capa_active{
+    /* background-color: rgb(85, 85, 85); */
+    background-color: white;
 }

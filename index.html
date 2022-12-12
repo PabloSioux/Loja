@@ -55,9 +55,38 @@
     </div>
   </aside>
 
-  <div class="capa">
+  <!-- <div class="capa">
     <img class="capa_imagem" src="img/capa-1-landscape.jpg">
-  </div>
+  </div> -->
+
+  <div class="capa_slider">
+    <div class="capa_slides" id="capa_slides">
+        <span class="capa_slide">
+            <picture>
+                <source class="capa_img" media="(min-width:800px)" srcset="img/capa-1-landscape.jpg">
+                <img class="capa_img" src="img/capa-1-portrait.jpg">
+            </picture>
+        </span>
+        <span class="capa_slide">
+            <picture>
+                <source class="capa_img" media="(min-width:800px)" srcset="img/capa-2-landscape.jpg">
+                <img  class="capa_img" src="img/capa-2-portrait.jpg">
+            </picture>
+        </span>
+        <span class="capa_slide">
+            <picture>
+                <source class="capa_img" media="(min-width:800px)" srcset="img/capa-3-landscape.jpg">
+                <img class="capa_img" src="img/capa-3-portrait.jpg">
+            </picture>
+        </span>
+    </div>
+
+    <ul class="capa_dot-container">
+        <li class="capa_dot capa_active" onclick="capa_dotMove(1)"></li>
+        <li class="capa_dot" onclick="capa_dotMove(2)"></li>
+        <li class="capa_dot" onclick="capa_dotMove(3)"></li>
+    </ul>
+</div>
 
   <div class="slider" id="slider">
     <div
@@ -189,6 +218,7 @@
   <script src="js/navbar.js"></script>
   <script src="js/height.js"></script>
   <script src="js/slide.js"></script>
+  <script src="js/capa.js"></script>
   <script src="js/app.js"></script>
   
 </body>
