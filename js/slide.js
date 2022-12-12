@@ -45,27 +45,31 @@ slides.addEventListener('touchmove', dragMove);
 slides.addEventListener('touchend', dragEnd);
 
 function dragStart(e){
-  e.preventDefault();
-  initialPosition = slides.offsetLeft;
-  
-  if (e.type == 'touchstart') {
-    posX1 = e.touches[0].clientX;
-  } else {
-    posX1 = e.clientX;
+  if(canISlide){
+    e.preventDefault();
+    initialPosition = slides.offsetLeft;
+    
+    if (e.type == 'touchstart') {
+      posX1 = e.touches[0].clientX;
+    } else {
+      posX1 = e.clientX;
+    }
+    document.onmouseup = dragEnd;
+    document.onmousemove = dragMove;
   }
-  document.onmouseup = dragEnd;
-  document.onmousemove = dragMove;
 }
 
 function dragMove(e){
-  if (e.type == 'touchmove') {
-    posX2 = posX1 - e.touches[0].clientX;
-    posX1 = e.touches[0].clientX;
-  } else {
-    posX2 = posX1 - e.clientX;
-    posX1 = e.clientX;
+  if(canISlide){
+    if (e.type == 'touchmove') {
+      posX2 = posX1 - e.touches[0].clientX;
+      posX1 = e.touches[0].clientX;
+    } else {
+      posX2 = posX1 - e.clientX;
+      posX1 = e.clientX;
+    }
+    slides.style.left = `${slides.offsetLeft - posX2}px`;
   }
-  slides.style.left = `${slides.offsetLeft - posX2}px`;
 }
 
 function dragEnd(){
@@ -76,16 +80,19 @@ function dragEnd(){
    * stay still
    * 496 ou 200
   **/
-  finalPosition = slides.offsetLeft;
-  if(finalPosition - initialPosition < -50) {
-    switchSlide('next', 'dragging');
-  } else if(finalPosition - initialPosition > 50){
-    switchSlide('prev', 'dragging');
-  } else {
-    slides.style.left = `${initialPosition}px`;
+
+  if(canISlide){
+     finalPosition = slides.offsetLeft;
+     if(finalPosition - initialPosition < -50) {
+       switchSlide('next', 'dragging');
+     } else if(finalPosition - initialPosition > 50){
+       switchSlide('prev', 'dragging');
+     } else {
+       slides.style.left = `${initialPosition}px`;
+     }
+     document.onmouseup = null;
+     document.onmousemove = null;
   }
-  document.onmouseup = null;
-  document.onmousemove = null;
 }
 
 function switchSlide(arg, arg2){
